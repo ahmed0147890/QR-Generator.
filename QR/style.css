@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: blue;
+    min-height: 100vh;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    background: white;
+    max-width: 410px;
+    height: 270px;
+    border-radius: 4px;
+    padding: 26px 10px;
+    transition: 0.5s ;
+}
+.container.active{
+    height: 580px;
+}
+.container.active .qr__code{
+    opacity: 1;
+    pointer-events: all;
+}
+.form input,button{
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+    outline: none;
+    font-size: 20px;
+}
+.form button,.qr__code a{
+    background: blue;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+    border: none;
+
+}
+.form button:hover{
+    background: red;
+    letter-spacing: 3px;
+}
+.qr__code{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    opacity: 0;
+    pointer-events: none;
+}
+.qr__code a{
+    text-decoration: none;
+    padding: 10px;
+    margin-top:15px ;
+    transition: 0.5s;
+}
+
+.qr__code img{
+    width: 40%;
+}
+.qr__code a:hover{
+    background: red;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
